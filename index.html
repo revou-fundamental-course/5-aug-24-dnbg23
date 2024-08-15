@@ -26,21 +26,21 @@
     
                 <div>
                     <h3>Body Weight (kg)</h3>
-                    <input type="number">
+                    <input type="number" id="weight" placeholder="Enter your weight" required>
                 </div>
     
                 <div>
-                    <h3>Age</h3>
-                    <input type="number">
+                    <h3>Age (years)</h3>
+                    <input type="number" id="age" placeholder="Enter your age" required>
                 </div>
     
                 <div>
                     <h3>Height (cm)</h3>
-                    <input type="number">
+                    <input type="number" id="height" placeholder="Enter your height" required>
                 </div>
     
                 <div class="form-btn-container">
-                    <button class="button bg-bisque">Calculate BMI</button>
+                    <button class="button bg-calculate" onclick="calculateBMI()">Calculate BMI</button>
                     <button class="button bg-reset">Reset</button>
                 </div>
     
@@ -48,7 +48,7 @@
     
             <article>
                 <header>
-                    <h2>Form Information</h2>
+                    <h2>Feature benefits</h2>
                 </header>
                 <ol>
                     <li>Calculate Body Weight: Quickly compute your current body weight based on input data.</li>
@@ -67,43 +67,46 @@
     
             </article>
         </aside>
-        
 
         <aside>
             <section class="result-container">
-                <h2>Hasil</h2>
-                <div class="bmi-result-box">
-                    <h3>Berat Badan Lebih</h3>
-                    <p class="bmi-value">24.7</p>
-                    <p>Anda memiliki berat badan berlebih</p>
-                    <button class="download-btn">Download Hasil BMI</button>
+                <h2>Results</h2>
+                <div class="'bmi-result-box">
+                    <h3 id="'bmi category">BMI Category</h3>
+                    <p class="bmi-value" id="bmi-value">0.0</p>
+                    <p id="bmi-description">Your BMI result will appear here</p>
+                    <button class="download-btn">Download BMI Result</button>
                 </div>
+
                 <div class="bmi-info">
-                    <p>Hasil BMI diantara 23 dan 25</p>
-                    <p>Anda berada dalam kategori overweight atau berat badan berlebih. Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga. Jika BMI Anda berada dalam kategori ini, maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+                    <p id="bmi-range">BMI result range will appear here</p>
+                    <p id="bmi-info-text">Further information about your BMI result will be displayed here.
+                        Please consult a health professional for personalized advice.</p>
+                    
                     <div class="consultation-buttons">
-                        <button class="consultation-btn" aria-label="Konsultasi Ahli Gizi Via Aplikasi">Konsultasi Ahli Gizi Via Aplikasi</button>
-                        <button class="consultation-btn" aria-label="Registrasi Online Ahli Gizi">Registrasi Online Ahli Gizi</button>
+                        <button class="consultation-btn">Consult a Nutrionist via App</button>
+                        <button class="consultation-btn">Register for Online Nutrionist Consultation</button>
                     </div>
-                    <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan risiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai risiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+                    <p>BMI does not fully represent a comprehensive diagnosis of a person's health and disease risk. 
+                        Further consultation regarding your weight-related risks and concerns is adivised.</p>
                 </div>
                 <div class="health-risks">
-                    <h3>Beberapa penyakit yang berasal dari kegemukan</h3>
+                    <h3>Some Diseases Related to Overweight</h3>
                     <ul>
                         <li>Diabetes</li>
-                        <li>Hipertensi</li>
-                        <li>Sakit Jantung</li>
+                        <li>Hypertension</li>
+                        <li>Heart Disease</li>
                         <li>Osteoarthritis</li>
                     </ul>
                     <div class="doctor-consultation-buttons">
-                        <button class="consultation-btn" aria-label="Konsultasi Dokter Via Aplikasi">Konsultasi Dokter Via Aplikasi</button>
-                        <button class="consultation-btn" aria-label="Registrasi Online Sekarang">Registrasi Online Sekarang</button>
+                        <button class="consultation-btn" aria-label="Consult a Doctor via App">Consult a Doctor via App</button>
+                        <button class="consultation-btn" aria-label="Register Online Now">Register Online Now</button>
                     </div>
                 </div>
             </section>
-        </aside> 
+        </aside>
     </main>
-
+    <script src="js/script.js"></script>
     <footer>
         <p>Made by Diva</p>
     </footer> 
